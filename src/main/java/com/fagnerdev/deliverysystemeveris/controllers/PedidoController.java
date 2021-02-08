@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import com.fagnerdev.deliverysystemeveris.entities.Pedido;
 import com.fagnerdev.deliverysystemeveris.services.PedidoService;
 
+/**
+ * Classe onde mapeamos e configuramos todas as funções e métodos associadas à entidade Pedido
+ */
+
 @RestController
 @RequestMapping(value = "/pedidos")
 public class PedidoController {

@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.*;
 import com.fagnerdev.deliverysystemeveris.entities.Produto;
 import com.fagnerdev.deliverysystemeveris.services.ProdutoService;
 
+
+/**
+ * Classe onde mapeamos e configuramos todas as funções e métodos associadas à entidade Produto
+ */
+
 @RestController
 @RequestMapping(value = "/produtos")
 public class ProdutoController {

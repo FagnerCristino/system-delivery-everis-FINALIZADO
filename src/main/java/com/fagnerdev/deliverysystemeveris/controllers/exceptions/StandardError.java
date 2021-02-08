@@ -5,9 +5,14 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.io.Serializable;
 import java.time.Instant;
 
+/**
+ * Classe que trata as exceções gerais do sistema
+ */
 public class StandardError implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    //Aqui confirguramos a resposta em base ao formato de resposta que o Json envia quando acontece uma exceção
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone="GMT")
     private Instant timestamp;

@@ -6,6 +6,11 @@ import javax.persistence.*;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
+/**
+ * Classe que represetna a entidade Produto
+ * aqui declaramos os atributos e a associamos a um cliente e a uma lista de pedidos
+ */
 @Entity
 @Table(name = "tb_produto")
 @RequestMapping(value = "/produtos")

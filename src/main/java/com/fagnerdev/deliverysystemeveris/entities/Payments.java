@@ -7,7 +7,9 @@ import javax.persistence.*;
 import com.fagnerdev.deliverysystemeveris.entities.enums.MetodoPagamento;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-
+/**
+ * Classe onde salvamos os dados do pagamento e associamos a um pedido
+ */
 @Entity
 @Table(name = "tb_payments")
 public class Payments {

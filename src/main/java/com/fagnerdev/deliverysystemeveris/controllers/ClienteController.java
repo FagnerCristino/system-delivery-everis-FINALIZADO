@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import com.fagnerdev.deliverysystemeveris.entities.Cliente;
 import com.fagnerdev.deliverysystemeveris.services.ClienteService;
 
+/**
+ * Classe onde mapeamos e configuramos todas as funções e métodos associadas à entidade Cliente
+ */
+
 @RestController
 @RequestMapping(value = "/clientes")
 public class ClienteController {

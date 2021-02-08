@@ -10,6 +10,9 @@ import java.io.Serializable;
 
 /**
  * Classe onde guardamos os items dos produtos selecionados pelo cliente
+ *
+ * Esta classe tem a peculiaridade de que o id é outra classe formando uma
+ * chave composta onde nela são guardados o id do produto e do pedido
  * 
  * @author fcristid
  *

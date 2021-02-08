@@ -19,7 +19,7 @@ import com.fagnerdev.deliverysystemeveris.entities.Produto;
  * 
  * Isso porque o par Pedido/Produto (ItemPedidoPk) vai representar a chave da classe ItemPedido.
  * 
- * Por isso criamos esta classe auxiliar ItemPedidoPk, classe que referencia as duas classes. 
+ * Por isso criamos esta classe auxiliar ItemPedidoPk, classe que referencia as duas classes (e suas respectivas chaves)
  * 
 
  * 

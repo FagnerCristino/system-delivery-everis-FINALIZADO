@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Classe onde mapeamos e configuramos todas as funções e métodos associadas à entidade ItemPedido
+ */
+
 @RestController
 @RequestMapping(value = "/item_pedido")
 public class ItemPedidoController {
@@ -27,6 +31,8 @@ public class ItemPedidoController {
 		return ResponseEntity.ok().body(obj);
 	
 	}
+
+	// Estes métodos foram implementados mas no funcionamento do sistema não são utilizados. Foram criados como teste e prática.
 	
 	@PostMapping
 	public ResponseEntity<ItemPedido> insert(@RequestBody ItemPedido obj){

@@ -14,7 +14,10 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-
+/**
+ * Entidade que representa um cliente comprador.
+ * Aqui vamos declarar os dados do comprador e associa-lo a uma lista de pedidos
+ */
 @Entity
 @Table(name = "tb_cliente")
 public class Cliente implements Serializable {
