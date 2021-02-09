@@ -56,40 +56,45 @@ public class TesteConfig implements CommandLineRunner{
 		Cliente c2 = new Cliente(null, "Alex Green", "48998368957", "alex@gmail.com", "123456", "marcus aurelio homem 259");
 		Cliente c3 = new Cliente(null, "Alberto Dias", "789632565", "alberto@gmail.com", "789653265", "Lauro Lonhares 1048");
 		Cliente c4 = new Cliente(null, "Marta Donizete", "489659878896", "marta@gmail.com", "0089654878", "hercilio luz 789");
+		Cliente c5 = new Cliente(null, "Luis da Silva", "4836895798", "luis@gmail.com", "0489659878", "joao gualberto 1058");
 
 
-		Pedido p1 = new Pedido(null, Instant.parse("2019-06-20T19:53:07Z"), StatusPedido.PREPARANDO, c1);
-		Pedido p2 = new Pedido(null, Instant.parse("2019-06-20T19:53:07Z"), StatusPedido.ENVIADO, c2);
-		Pedido p3 = new Pedido(null, Instant.parse("2019-06-20T19:53:07Z"), StatusPedido.ENTREGADO, c3);
-		Pedido p4 = new Pedido(null, Instant.parse("2021-01-20T09:32:00Z"), StatusPedido.ENVIADO, c4);
+		Pedido p1 = new Pedido(null, Instant.parse("2021-02-07T19:53:07Z"), StatusPedido.PREPARANDO, c1, produto1);
+		Pedido p2 = new Pedido(null, Instant.parse("2021-01-29T02:33:18Z"), StatusPedido.ENVIADO, c2, produto2);
+		Pedido p3 = new Pedido(null, Instant.parse("2019-06-20T19:53:07Z"), StatusPedido.ENTREGADO, c3, produto3);
+		Pedido p4 = new Pedido(null, Instant.parse("2021-02-08T09:32:00Z"), StatusPedido.PREPARANDO, c4, produto4);
+		Pedido p5 = new Pedido(null, Instant.parse("2020-10-15T21:45:01Z"), StatusPedido.ENTREGADO, c5, produto5);
 		
 		
-		clienteRepository.saveAll(Arrays.asList(c1, c2, c3, c4));
-		pedidoRepository.saveAll(Arrays.asList(p1, p2, p3, p4));
+		clienteRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5));
+		pedidoRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 		
 		ItemPedido ip1 = new ItemPedido(p3, produto5, 2, produto5.getPreco());
 		ItemPedido ip2 = new ItemPedido(p1, produto3, 1, produto3.getPreco());
 		ItemPedido ip3 = new ItemPedido(p2, produto4, 3, produto4.getPreco());
 		ItemPedido ip4 = new ItemPedido(p1, produto1, 1, produto1.getPreco());
-		ItemPedido ip5 = new ItemPedido(p4, produto3, 3, produto3.getPreco());
+		ItemPedido ip5 = new ItemPedido(p4, produto5, 3, produto2.getPreco());
 		
 		itemPedidoRepository.saveAll(Arrays.asList(ip1, ip2, ip3, ip4, ip5));
 		
-		Payments pag1 = new Payments(null, Instant.parse("2019-06-20T21:53:07Z"),  p1, MetodoPagamento.CREDITO);
-		Payments pag2 = new Payments(null, Instant.parse("2019-06-20T21:53:07Z"),  p2, MetodoPagamento.DEBITO);
-		Payments pag3 = new Payments(null, Instant.parse("2019-06-20T21:53:07Z"),  p3, MetodoPagamento.DINHEIRO);
-		Payments pag4 = new Payments(null, Instant.parse("2019-06-20T21:53:07Z"),  p4, MetodoPagamento.CREDITO);
+		Payments pag1 = new Payments(null, Instant.parse("2021-02-07T20:30:33Z"),  p1, MetodoPagamento.CREDITO);
+		Payments pag2 = new Payments(null, Instant.parse("2021-01-30T02:33:18Z"),  p2, MetodoPagamento.DEBITO);
+		Payments pag3 = new Payments(null, Instant.parse("2019-06-22T08:15:07Z"),  p3, MetodoPagamento.DINHEIRO);
+		Payments pag4 = new Payments(null, Instant.parse("2021-02-08T09:35:10Z"),  p4, MetodoPagamento.CREDITO);
+		Payments pag5 = new Payments(null, Instant.parse("2020-10-16T01:45:01Z"),  p5, MetodoPagamento.DEBITO);
 		
 		
 		p1.setPagamento(pag1);
 		p2.setPagamento(pag2);
 		p3.setPagamento(pag3);
 		p4.setPagamento(pag4);
+		p5.setPagamento(pag5);
 		
 		pedidoRepository.save(p1);
 		pedidoRepository.save(p2);
 		pedidoRepository.save(p3);
 		pedidoRepository.save(p4);
+		pedidoRepository.save(p5);
 
 
 

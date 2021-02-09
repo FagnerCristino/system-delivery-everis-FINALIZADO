@@ -70,12 +70,13 @@ public class Pedido implements Serializable {
 
 	}
 
-	public Pedido(Long id, Instant momento, StatusPedido statusPedido, Cliente cliente) {
+	public Pedido(Long id, Instant momento, StatusPedido statusPedido, Cliente cliente, Produto produto) {
 		super();
 		this.id = id;
 		this.momento = momento;
 		this.cliente = cliente;
 		setStatusPedido(statusPedido);
+		this.produto = produto;
 	}
 
 	public Long getId() {
@@ -118,6 +119,14 @@ public class Pedido implements Serializable {
 
 	public void setPagamento(Payments pagamento) {
 		this.pagamento = pagamento;
+	}
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
 	}
 
 	// método que retorna os items selecionados
