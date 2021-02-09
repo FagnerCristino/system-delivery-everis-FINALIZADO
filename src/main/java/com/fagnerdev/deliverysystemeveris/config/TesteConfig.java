@@ -17,8 +17,13 @@ import com.fagnerdev.deliverysystemeveris.repositories.PedidoRepository;
 import com.fagnerdev.deliverysystemeveris.repositories.ProdutoRepository;
 
 /**
- * Classe  criada para testar as funções da API
+ * Classe  criada para testar as funções da API e popular (Seeding) o banco  de dados
+ *
+ * @author Fagner Cristino
+ *
  */
+
+
 @Configuration
 @Profile("test")
 public class TesteConfig implements CommandLineRunner{

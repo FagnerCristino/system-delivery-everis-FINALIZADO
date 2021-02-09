@@ -1,0 +1,10 @@
+com.fagnerdev.deliverysystemeveris
+com.fagnerdev.deliverysystemeveris.config
+com.fagnerdev.deliverysystemeveris.controllers
+com.fagnerdev.deliverysystemeveris.controllers.exceptions
+com.fagnerdev.deliverysystemeveris.entities
+com.fagnerdev.deliverysystemeveris.entities.enums
+com.fagnerdev.deliverysystemeveris.entities.pk
+com.fagnerdev.deliverysystemeveris.repositories
+com.fagnerdev.deliverysystemeveris.services
+com.fagnerdev.deliverysystemeveris.services.exceptions

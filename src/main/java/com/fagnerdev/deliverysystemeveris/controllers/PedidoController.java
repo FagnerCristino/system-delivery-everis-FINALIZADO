@@ -11,7 +11,11 @@ import com.fagnerdev.deliverysystemeveris.services.PedidoService;
 
 /**
  * Classe onde mapeamos e configuramos todas as funções e métodos associadas à entidade Pedido
+ *
+ * @author Fagner Cristino
+ *
  */
+
 
 @RestController
 @RequestMapping(value = "/pedidos")

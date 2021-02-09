@@ -8,8 +8,11 @@ import com.fagnerdev.deliverysystemeveris.entities.enums.MetodoPagamento;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * Classe onde salvamos os dados do pagamento e associamos a um pedido
+ * Classe onde salvamos os dados do pagamento e o associamos à um pedido
+ *
+ * @author Fagner Cristino
  */
+
 @Entity
 @Table(name = "tb_payments")
 public class Payments {
@@ -22,8 +25,12 @@ public class Payments {
 
 	@Enumerated
 	private MetodoPagamento metodoPagamento;
-	
-	@JsonIgnore // associação de mão dupla, utilizamos esta anotação pois sem ela ao fazer a consulta no Postman fica dando loop infinito.
+
+	/**
+	 * Associação de mão dupla. Utilizamos esta anotação (@JsonIgnore)
+	 * para evtitar que a requisição fique presa num looping infinito.
+	 */
+	@JsonIgnore
 	@OneToOne
 	private Pedido pedido;
 	

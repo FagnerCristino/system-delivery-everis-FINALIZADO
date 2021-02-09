@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * Classe onde associamos a classe Cliente à Classe Pedido e criamos uma lista com os itens (produtos) selecionados pelo cliente.
  * 
- * @author fcristid
+ *@author Fagner Cristino
  *
  */
 

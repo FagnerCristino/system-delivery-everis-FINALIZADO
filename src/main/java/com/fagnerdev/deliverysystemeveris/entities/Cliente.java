@@ -17,6 +17,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * Entidade que representa um cliente comprador.
  * Aqui vamos declarar os dados do comprador e associa-lo a uma lista de pedidos
+ * 
+ * @author Fagner Cristino
  */
 @Entity
 @Table(name = "tb_cliente")

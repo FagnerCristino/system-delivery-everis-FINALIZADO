@@ -11,6 +11,9 @@ import com.fagnerdev.deliverysystemeveris.services.ClienteService;
 
 /**
  * Classe onde mapeamos e configuramos todas as funções e métodos associadas à entidade Cliente
+ *
+ * @author Fagner Cristino
+ *
  */
 
 @RestController

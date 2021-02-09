@@ -13,6 +13,9 @@ import com.fagnerdev.deliverysystemeveris.services.ProdutoService;
 
 /**
  * Classe onde mapeamos e configuramos todas as funções e métodos associadas à entidade Produto
+ *
+ * @author Fagner Cristino
+ *
  */
 
 @RestController

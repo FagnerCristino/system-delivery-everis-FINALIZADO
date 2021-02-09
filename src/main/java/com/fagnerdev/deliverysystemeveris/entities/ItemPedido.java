@@ -14,7 +14,7 @@ import java.io.Serializable;
  * Esta classe tem a peculiaridade de que o id é outra classe formando uma
  * chave composta onde nela são guardados o id do produto e do pedido
  * 
- * @author fcristid
+ * @author Fagner Cristino
  *
  */
 

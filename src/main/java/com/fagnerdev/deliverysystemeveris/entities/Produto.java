@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Classe que represetna a entidade Produto
- * aqui declaramos os atributos e a associamos a um cliente e a uma lista de pedidos
+ * Aqui declaramos os atributos e a associamos à um cliente e a uma lista de pedidos
+ *
+ * @author Fagner Cristino
  */
 @Entity
 @Table(name = "tb_produto")

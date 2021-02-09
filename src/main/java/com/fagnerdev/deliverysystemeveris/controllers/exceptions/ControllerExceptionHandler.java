@@ -12,6 +12,9 @@ import java.time.Instant;
 
 /**
  * Classe que trata quando um objeto não é encontrado na requisição
+ *
+ * @author Fagner Cristino
+ *
  */
 @ControllerAdvice
 public class ControllerExceptionHandler {

@@ -7,6 +7,9 @@ import java.time.Instant;
 
 /**
  * Classe que trata as exceções gerais do sistema
+ *
+ * @author Fagner Cristino
+ *
  */
 public class StandardError implements Serializable {
 

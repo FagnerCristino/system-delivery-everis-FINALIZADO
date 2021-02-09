@@ -14,6 +14,16 @@ import com.fagnerdev.deliverysystemeveris.repositories.ClienteRepository;
 
 import javax.persistence.EntityNotFoundException;
 
+/***
+ *
+ * Classe onde implementamos os métodos que logo a classe ClienteController
+ *
+ * vai utilizar para enviar as informações ao banco de dados
+ *
+ * @author Fagner Cristino
+ *
+ */
+
 @Service
 public class ClienteService {
 	

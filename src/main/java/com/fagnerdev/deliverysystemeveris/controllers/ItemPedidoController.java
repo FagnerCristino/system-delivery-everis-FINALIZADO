@@ -11,6 +11,9 @@ import java.util.List;
 
 /**
  * Classe onde mapeamos e configuramos todas as funções e métodos associadas à entidade ItemPedido
+ *
+ * @author Fagner Cristino
+ *
  */
 
 @RestController
