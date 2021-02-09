@@ -5,7 +5,10 @@ import java.util.Optional;
 
 import com.fagnerdev.deliverysystemeveris.entities.Cliente;
 import com.fagnerdev.deliverysystemeveris.services.exceptions.ControllerNotFoundException;
+import com.fagnerdev.deliverysystemeveris.services.exceptions.DataBaseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import com.fagnerdev.deliverysystemeveris.entities.Produto;
@@ -31,7 +34,14 @@ public class ProdutoService {
 	}
 
 	public void delete(Long id){
-		produtoRepository.deleteById(id);
+		try {
+			produtoRepository.deleteById(id);
+		} catch (EmptyResultDataAccessException e) {
+			throw new ControllerNotFoundException(id);//exceção quando na requisição DELETE um id não é encontrado
+		} catch (DataIntegrityViolationException e) {
+			throw new DataBaseException(e.getMessage());
+
+		}
 	}
 
 	public Produto update(Long id, Produto obj){
